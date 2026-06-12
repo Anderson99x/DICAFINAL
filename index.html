@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJETO VALENTINE // PAINEL DE MISSÃO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scanline"></div>
+    <div class="container">
+        <div class="cabecalho-sistema">
+            <h1>SISTEMA TÁTICO - DIA D</h1>
+            <span class="badge">ACESSO RESTRITO</span>
+        </div>
+        
+        <p id="status-text">> SISTEMA SINCRONIZADO. AGUARDANDO LIBERAÇÃO DE DADOS...</p>
+
+        <!-- ÁREA DO CRONÔMETRO -->
+        <div id="area-cronometro">
+            <p id="titulo-cronometro" class="alerta">> PRÓXIMA FASE EM:</p>
+            <div id="temporizador">00:00:00</div>
+        </div>
+
+        <!-- FASE 1: 13:30 (TRAMPOLIM) -->
+        <div id="fase1" class="caixa-fase oculto">
+            <div class="fase-header">ETAPA 01: OPERAÇÃO GRAVIDADE ZERO (13:30)</div>
+            <div class="fase-conteudo">
+                <p><strong>STATUS:</strong> Ativo. Equipamento de fricção necessário.</p>
+                <p><strong>ALVO:</strong> Setor de Imersão e Desorientação Controlada.</p>
+                <div class="destaque-fase">
+                    <strong>IMPULSO PARK</strong>
+                    <p>Rua Dr. Alfredo de Castro, 160
+Barra Funda – SP</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FASE 2: 21:00 (JANTAR) -->
+        <div id="fase2" class="caixa-fase oculto">
+            <div class="fase-header">ETAPA 02: PROTOCOLO DE REABASTECIMENTO (21:00)</div>
+            <div class="fase-conteudo">
+                <p><strong>STATUS:</strong> Ativo. Desativar modo de combate. Traje civil elegante recomendado.</p>
+                <p><strong>ALVO:</strong> Recuperação energética VIP.</p>
+                <div class="destaque-fase">
+                    <strong>Bovinu´S Churrascaria</strong>
+                    <p>Av. Ermano Marchetti, 1058 - Lapa, São Paulo - SP, 05038-001</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FASE 3: 23:00 (CARTA DE AMOR + FOTOS + VÍDEO COM SENHA) -->
+        <div id="fase3" class="caixa-fase oculto">
+            <div class="fase-header">ETAPA 03: DESCRIPTOGRAFIA FINAL (23:00)</div>
+            <div class="fase-conteudo">
+                <p><strong>DE:</strong> COMANDO CENTRAL</p>
+                <p><strong>PARA:</strong> AGENTE VALENTINE</p>
+                
+                <div class="carta-amor">
+                    <p>Agente Valentine... ou melhor, meu amor.</p>
+                    <p>A operação de hoje chegou ao fim. Agora não existem mais códigos, disfarces ou firewalls entre nós. Sou só eu, de peito aberto para você.</p>
+                    <p>O nosso roteiro recente teve uma falha de comunicação, um desvio inesperado. Mas aquelas duas semanas em que o sinal caiu me provaram uma coisa: a minha vida só funciona de verdade quando o meu radar está sincronizado com o seu. Nós escolhemos recalibrar a rota e voltar um para o outro, e essa foi a decisão mais certa que já tomamos.</p>
+                    <p>Nós podemos não estar carregando alianças nos dedos agora, mas o que temos é muito mais valioso. O nosso compromisso não precisa de um símbolo de metal para ser real; ele se prova nas nossas escolhas diárias, na nossa vontade de reconstruir e em dias incríveis como o de hoje.</p>
+                    <p>Obrigado por topar as minhas loucuras, por pular de cabeça nas minhas missões e por ser a minha parceira definitiva. Que a gente continue sempre assim: superando as quedas e voltando ainda mais fortes.</p>
+                    <p>Feliz Dia dos Namorados.</p>
+                    <p>Eu te amo, hoje e sempre.<br><strong>Anderson</strong></p>
+                </div>
+
+                <!-- ÁREA DO ÁLBUM DE FOTOS -->
+                <div class="arquivos-anexos">
+                    <p class="alerta">> REGISTROS DE MISSÕES PASSADAS (ÁLBUM):</p>
+                    <div class="galeria-fotos">
+                        <!-- Lembre-se de subir esses arquivos de imagem pro GitHub -->
+                        <div class="foto-frame"><img src="foto1.jpg" alt="Registro 1"></div>
+                        <div class="foto-frame"><img src="foto2.jpg" alt="Registro 2"></div>
+                        <div class="foto-frame"><img src="foto3.jpg" alt="Registro 3"></div>
+                        <div class="foto-frame"><img src="foto4.jpg" alt="Registro 3"></div>
+                        <div class="foto-frame"><img src="foto5.jpg" alt="Registro 3"></div>
+                        <div class="foto-frame"><img src="foto6.jpg" alt="Registro 3"></div>
+                    </div>
+                </div>
+
+                <!-- ÁREA DO VÍDEO CRIPTOGRAFADO -->
+                <div class="arquivos-video">
+                    <p class="alerta">> ARQUIVO DE VÍDEO RESTRITO DETECTADO:</p>
+                    
+                    <!-- Painel de senha do Vídeo -->
+                    <div id="video-bloqueado">
+                        <p style="font-size: 14px; margin-bottom: 10px; color: #ffffff;">Para carregar o arquivo de mídia, responda:</p>
+                        <p style="font-size: 15px; font-weight: bold; margin-bottom: 15px; color: #ff1a1a;">QUANDO NOS CONHECEMOS?</p>
+                        <input type="text" id="senha-video" placeholder="DIGITE A RESPOSTA">
+                        <br>
+                        <button id="btn-liberar-video">DESBLOQUEAR MÍDIA</button>
+                        <p id="erro-video" class="oculto">ERRO: Chave incorreta.</p>
+                    </div>
+
+                    <!-- Reprodutor de Vídeo (Fica oculto até acertar a senha) -->
+                    <div id="video-liberado" class="oculto">
+                        <div class="video-container">
+                            <!-- Coloque apenas o link embed do Google Drive no lugar da URL abaixo -->
+                           <iframe src="https://drive.google.com/file/d/1ivyjBhyzUEJ9UWDNg9jZjuTab8bRK2NG/preview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
