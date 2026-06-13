@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const erroVideo = document.getElementById("erro-video");
 
 
-    const SENHA_VIDEO_CORRETA = "21/01/2024"; 
+    const SENHA_VIDEO_CORRETA = "22/01/2024"; 
 
 
     const alvo1 = new Date(); alvo1.setHours(16, 30, 0, 0); // 13:30 - Trampolim
